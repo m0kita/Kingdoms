@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.mokita.kingdoms.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_countryFragment"
+            app:destination="@id/countryFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="ru.mokita.kingdoms.ui.country.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="region"
+            app:argType="string" />
+        <argument
+            android:name="flag"
+            app:argType="string" />
+        <argument
+            android:name="capital"
+            app:argType="string" />
+        <argument
+            android:name="currency"
+            app:argType="string" />
+        <argument
+            android:name="timezones"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_countryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

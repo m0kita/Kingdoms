@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kingdoms</string>
+    <string name="name">Name: %1$s</string>
+    <string name="capital">Capital: %1$s</string>
+    <string name="region">Region: %1$s</string>
+    <string name="currency">Currency: %1$s</string>
+    <string name="timezones">Timezones:\n%1$s</string>
+</resources>
